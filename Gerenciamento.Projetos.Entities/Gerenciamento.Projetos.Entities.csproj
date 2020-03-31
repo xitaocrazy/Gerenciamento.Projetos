@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Softplan.Common.Core" Version="19.4.1.24" />
-    <PackageReference Include="System.Collections.Immutable" Version="1.7.0" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using Softplan.Common.Core.Entities;
 
 namespace Gerenciamento.Projetos.Entities
@@ -25,7 +24,7 @@ namespace Gerenciamento.Projetos.Entities
         {
             get
             {
-return ImmutableList.CreateRange(_lancamentos);
+return _lancamentos;
             }
         }
     }

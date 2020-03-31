@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Gerenciamento.Projetos.Entities;
 using Gerenciamento.Projetos.Repositories.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Softplan.Common.Core.Entities;
 using Softplan.Common.Repositories.EntityFrameworkCore;
 
@@ -22,6 +24,13 @@ namespace Gerenciamento.Projetos.Repositories.Repositories
         public async Task<Projeto> FindByIdAsync(Guid id)
         {
             return await GetByIdAsync(new SimpleId<Guid> {Id = id});
+        }
+
+        public async Task<ICollection<Projeto>> FindProjetosComLancamentos()
+        {
+            var projetos = await RepositoryService.GetQueryableAsync<Projeto>(default);
+            projetos = projetos.Include(p => p.Lancamentos);
+            return await projetos.ToListAsync();
         }
 
         public async Task RemoveProjetoAsync(Projeto projeto)
