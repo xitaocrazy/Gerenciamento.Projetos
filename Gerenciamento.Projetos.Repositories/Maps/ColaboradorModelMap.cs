@@ -1,12 +1,12 @@
-using Gerenciamento.Projetos.Entities;
+﻿using Gerenciamento.Projetos.Repositories.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Gerenciamento.Projetos.Repositories.Maps
 {
-    public class ColaboradorMap : IEntityTypeConfiguration<Colaborador>
+    public class ColaboradorModelMap : IEntityTypeConfiguration<ColaboradorModel>
     {
-        public void Configure(EntityTypeBuilder<Colaborador> builder)
+        public void Configure(EntityTypeBuilder<ColaboradorModel> builder)
         {
             builder.ToTable("colaborador").HasKey(c => c.Id);
             builder.Property(c => c.Id)

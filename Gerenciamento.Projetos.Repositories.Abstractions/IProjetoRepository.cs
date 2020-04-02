@@ -11,6 +11,5 @@ namespace Gerenciamento.Projetos.Repositories.Abstractions
         Task UpdateProjetoAsync(Projeto projeto);
         Task RemoveProjetoAsync(Projeto projeto);
         Task<Projeto> FindByIdAsync(Guid id);
-        Task<ICollection<Projeto>> FindProjetosComLancamentos();
     }
 }

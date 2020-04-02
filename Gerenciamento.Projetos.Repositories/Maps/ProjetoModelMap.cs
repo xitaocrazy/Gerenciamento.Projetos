@@ -1,12 +1,12 @@
-﻿using Gerenciamento.Projetos.Entities;
+﻿using Gerenciamento.Projetos.Repositories.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Gerenciamento.Projetos.Repositories.Maps
 {
-    public class ProjetoMap : IEntityTypeConfiguration<Projeto>
+    public class ProjetoModelMap : IEntityTypeConfiguration<ProjetoModel>
     {
-        public void Configure(EntityTypeBuilder<Projeto> builder)
+        public void Configure(EntityTypeBuilder<ProjetoModel> builder)
         {
             builder.ToTable("projeto").HasKey(p => p.Id);
             builder.Property(p => p.Id)

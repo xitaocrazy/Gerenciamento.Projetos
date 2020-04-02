@@ -43,7 +43,7 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
 
         [Fact]
-        public async Task ShouldSaveAColaboratorIntoTheDatabase()
+        public async Task ShouldSaveAProjectIntoTheDatabase()
         {
             var projeto = new Projeto
             {
@@ -57,42 +57,7 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
 
         [Fact]
-        public async Task ShouldSaveAColaboratorWithLancamentosIntoTheDatabase()
-        {
-            var projeto = new Projeto
-            {
-                Id = Guid.NewGuid(),
-                Nome = "Guido",
-                Descricao = "abc"
-            };
-            var colaborador = new Colaborador
-            {
-                Id = Guid.NewGuid(),
-                Nome = "Guido"
-            };
-            var horas = new HorasTrabalhadas
-            {
-                Id = Guid.NewGuid(),
-                QuantidadeDeHoras = 10
-            };
-            var lancamento = new Lancamento
-            {
-                ProjetoId = projeto.Id,
-                ColaboradorId = colaborador.Id,
-                HorasTrabalhadasId = horas.Id,
-                Colaborador = colaborador,
-                Projeto = projeto,
-                Horas = horas
-            };
-            projeto.AddLancamento(lancamento);
-            await _repository.AddProjetoAsync(projeto);
-            var projetosFromDatabase = await _repository.FindProjetosComLancamentos();
-            Assert.NotNull(projetosFromDatabase.FirstOrDefault());
-            Assert.NotEmpty(projetosFromDatabase.FirstOrDefault().Lancamentos);
-        }
-
-        [Fact]
-        public async Task ShouldUpdateAColaboratorIntoTheDatabase()
+        public async Task ShouldUpdateAProjectIntoTheDatabase()
         {
             //Given
             var projeto = new Projeto
@@ -113,7 +78,7 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
 
         [Fact]
-        public async Task ShouldNotUpdateAColaboratorIntoTheDatabaseIfHeDoesNotExists()
+        public async Task ShouldNotUpdateAProjectIntoTheDatabaseIfHeDoesNotExists()
         {
             //Given
             var projeto = new Projeto
@@ -129,7 +94,7 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
 
         [Fact]
-        public async Task ShouldDeleteAColaboratorFromTheDatabase()
+        public async Task ShouldDeleteAProjectFromTheDatabase()
         {
             //Given
             var projeto = new Projeto
@@ -147,7 +112,7 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
 
         [Fact]
-        public async Task ShouldNotDeleteAColaboratorFromTheDatabaseIfHeDoesNotExist()
+        public async Task ShouldNotDeleteAProjectFromTheDatabaseIfHeDoesNotExist()
         {
             //Given
             var projeto = new Projeto

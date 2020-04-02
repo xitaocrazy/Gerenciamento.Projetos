@@ -11,6 +11,5 @@ namespace Gerenciamento.Projetos.Repositories.Abstractions
         Task UpdateColaboradorAsync(Colaborador colaborador);
         Task RemoveColaboradorAsync(Colaborador colaborador);
         Task<Colaborador> FindByIdAsync(Guid id);
-        Task<ICollection<Colaborador>> FindColaboradoresComLancamentos();
     }
 }
