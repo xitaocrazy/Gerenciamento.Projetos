@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Softplan.Common.MultiTenancy.EntityFrameworkCore.Abstractions" Version="$(SoftplanCommonsVersion)" />
+    <PackageReference Include="Softplan.Common.Repositories.EntityFrameworkCore" Version="$(SoftplanCommonsVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gerenciamento.Projetos.Entities\Gerenciamento.Projetos.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

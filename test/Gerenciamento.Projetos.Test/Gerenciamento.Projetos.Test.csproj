@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Softplan.Common.Test.AspNetCore" Version="$(SoftplanCommonsVersion)" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Gerenciamento.Projetos.Entities\Gerenciamento.Projetos.Entities.csproj" />
+    <ProjectReference Include="..\..\src\Gerenciamento.Projetos.Repositories\Gerenciamento.Projetos.Repositories.csproj" />
+    <ProjectReference Include="..\..\src\Gerenciamento.Projetos.WebApi\Gerenciamento.Projetos.WebApi.csproj" />
+  </ItemGroup>
+
+</Project>
