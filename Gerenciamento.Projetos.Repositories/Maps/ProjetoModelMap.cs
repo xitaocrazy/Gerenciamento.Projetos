@@ -8,19 +8,24 @@ namespace Gerenciamento.Projetos.Repositories.Maps
     {
         public void Configure(EntityTypeBuilder<ProjetoModel> builder)
         {
-            builder.ToTable("projeto").HasKey(p => p.Id);
+            builder.ToTable("projeto");
+            builder.HasKey(p => p.Id);
+
             builder.Property(p => p.Id)
-            .HasColumnName("idProjeto")
-            .ValueGeneratedOnAdd();
+                .HasColumnName("idProjeto")
+                .ValueGeneratedOnAdd();
             builder.Property(p => p.Nome)
-            .HasColumnName("nome")
-            .HasMaxLength(30);
+
+                .HasColumnName("nome")
+                .HasMaxLength(30);
+
             builder.Property(p => p.Descricao)
-            .HasColumnName("descricao");
+                .HasColumnName("descricao");
+
             builder.HasMany(p => p.Lancamentos)
-            .WithOne(l => l.Projeto)
-            .HasForeignKey(l => l.ProjetoId)
-            .HasPrincipalKey(p => p.Id);
+                .WithOne(l => l.Projeto)
+                .HasForeignKey(l => l.ProjetoId)
+                .HasPrincipalKey(p => p.Id);
         }
     }
 }

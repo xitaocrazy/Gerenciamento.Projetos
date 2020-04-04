@@ -1,5 +1,4 @@
-﻿using Gerenciamento.Projetos;
-using Softplan.Common.Graph.Abstractions;
+﻿using Softplan.Common.Graph.Abstractions;
 using Softplan.Common.Graph.Types;
 
 namespace Gerenciamento.Projetos.WebApi.Graph.Projeto.Types

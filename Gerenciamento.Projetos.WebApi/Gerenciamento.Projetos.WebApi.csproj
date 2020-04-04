@@ -2,19 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Softplan.Common.AspNetCore.WebApi.Abstractions" Version="19.4.1.24" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version = "2.2.6"/>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Softplan.Common.AspNetCore.WebApi.Abstractions" Version="$(SoftplanCommonsVersion)" />
+    <PackageReference Include="Softplan.Common.Services.Abstractions" Version="$(SoftplanCommonsVersion)" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Gerenciamento.Projetos.Repositories\Gerenciamento.Projetos.Repositories.csproj" />
-    <ProjectReference Include="..\Gerenciamento.Projetos.Entities\Gerenciamento.Projetos.Entities.csproj" />
   </ItemGroup>
-
-
 
 </Project>

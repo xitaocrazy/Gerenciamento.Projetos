@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="Softplan.Common.Test.AspNetCore" Version="19.4.1.24" />
+    <PackageReference Include="Softplan.Common.Test.AspNetCore" Version="$(SoftplanCommonsVersion)" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
@@ -20,7 +20,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Gerenciamento.Projetos.Entities\Gerenciamento.Projetos.Entities.csproj" />
     <ProjectReference Include="..\Gerenciamento.Projetos.Repositories\Gerenciamento.Projetos.Repositories.csproj" />
-    <ProjectReference Include="..\Gerenciamento.Projetos.Repositories.Abstractions\Gerenciamento.Projetos.Repositories.Abstractions.csproj" />
     <ProjectReference Include="..\Gerenciamento.Projetos.WebApi\Gerenciamento.Projetos.WebApi.csproj" />
   </ItemGroup>
 

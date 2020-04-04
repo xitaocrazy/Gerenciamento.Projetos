@@ -1,10 +1,9 @@
 ﻿using System;
+using Gerenciamento.Projetos.WebApi.Graph.Projeto.Types;
+using Gerenciamento.Projetos.WebApi.Graph.Schema;
 using Softplan.Common.Core.Entities;
 using Softplan.Common.Graph.Abstractions;
 using Softplan.Common.Graph.SchemaExtension;
-using Gerenciamento.Projetos;
-using Gerenciamento.Projetos.WebApi.Graph.Projeto.Types;
-using Gerenciamento.Projetos.WebApi.Graph.Schema;
 
 namespace Gerenciamento.Projetos.WebApi.Graph.Projeto
 {

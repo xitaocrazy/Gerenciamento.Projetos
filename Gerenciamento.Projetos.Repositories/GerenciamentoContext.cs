@@ -11,8 +11,8 @@ namespace Gerenciamento.Projetos.Repositories
         }
 
         protected override void OnMultiTenancyModelCreating(ModelBuilder modelBuilder)
-        {
-modelBuilder.ApplyConfigurationsFromAssembly(typeof(GerenciamentoContext).Assembly);
+        { 
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(GerenciamentoContext).Assembly);
         }
     }
 }

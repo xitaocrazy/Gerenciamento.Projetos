@@ -21,12 +21,6 @@ namespace Gerenciamento.Projetos.Entities
 
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public IList<Lancamento> Lancamentos
-        {
-            get
-            {
-return _lancamentos;
-            }
-        }
+        public IList<Lancamento> Lancamentos => _lancamentos;
     }
 }

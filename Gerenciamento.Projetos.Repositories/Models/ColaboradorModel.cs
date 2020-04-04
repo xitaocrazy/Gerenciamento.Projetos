@@ -20,12 +20,6 @@ namespace Gerenciamento.Projetos.Repositories.Models
         }
 
         public string Nome { get; set; }
-        public IList<LancamentoModel> Lancamentos
-        {
-            get
-            {
-return _lancamentos;
-            }
-        }
+        public IList<LancamentoModel> Lancamentos => _lancamentos;
     }
 }

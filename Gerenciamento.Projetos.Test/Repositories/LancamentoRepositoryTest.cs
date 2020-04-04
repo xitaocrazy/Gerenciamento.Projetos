@@ -1,12 +1,9 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using Gerenciamento.Projetos.Entities;
 using Gerenciamento.Projetos.Repositories;
-using Gerenciamento.Projetos.Repositories.Abstractions;
-using Gerenciamento.Projetos.Repositories.Profiles;
 using Gerenciamento.Projetos.Repositories.Repositories;
 using Gerenciamento.Projetos.WebApi;
 using Microsoft.EntityFrameworkCore;
@@ -112,3 +109,4 @@ namespace Gerenciamento.Projetos.Test.Repositories
         }
     }
 }
+*/
