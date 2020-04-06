@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Softplan.Common.AspNetCore.WebApi.Abstractions" Version="$(SoftplanCommonsVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Softplan.Gerenciamento.Projetos.Repositories\Softplan.Gerenciamento.Projetos.Repositories.csproj" />
+    <ProjectReference Include="..\Softplan.Gerenciamento.Projetos.Services\Softplan.Gerenciamento.Projetos.Services.csproj" />
+  </ItemGroup>
+
+</Project>
